@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{--bg:#080d1e;--bg2:#0d1530;--panel:rgba(18,27,55,.78);--line:rgba(183,195,255,.17);--text:#f4f1ff;--muted:#a6aecb;--gold:#d9c18d;--violet:#a99af5;--mint:#9edbd4}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,Arial,sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden;background-image:radial-gradient(ellipse at 15% 8%,rgba(89,84,158,.22),transparent 34%),radial-gradient(ellipse at 85% 30%,rgba(44,111,142,.14),transparent 30%),radial-gradient(rgba(255,255,255,.42) .7px,transparent .8px),radial-gradient(rgba(191,204,255,.26) .8px,transparent .9px);background-size:auto,auto,120px 120px,190px 190px;background-position:0 0,0 0,10px 20px,70px 80px;color:var(--text)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(180deg,rgba(7,11,27,.1),rgba(7,11,27,.7))}
+.container{width:min(1160px,calc(100% - 48px));margin:auto}
+header,main,footer{padding:0}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(8,13,30,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.header-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:12px;letter-spacing:.2em;font-weight:800;color:var(--text);white-space:nowrap}.brand-mark{color:var(--gold);font-size:22px;vertical-align:-2px;margin-right:8px}
+.header-nav{display:flex;gap:34px}.header-nav a,.text-link{color:var(--muted);font-size:13px;text-decoration:none;transition:.2s}.header-nav a:hover,.text-link:hover{color:var(--gold)}
+.header-cta{border:1px solid rgba(217,193,141,.55);padding:11px 18px;border-radius:30px;text-decoration:none;color:var(--gold);font-size:12px;letter-spacing:.04em}.header-cta span{margin-left:12px}
+main{position:relative}.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:75px 0 55px;position:relative}
+.hero-copy{max-width:620px;position:relative;z-index:2}.eyebrow,.section-kicker{font-size:10px;letter-spacing:.24em;color:var(--gold);font-weight:800}.eyebrow span{display:inline-block;width:26px;height:1px;background:var(--gold);vertical-align:middle;margin-right:10px}
+h1,h2,h3,p{margin-top:0}h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:500;line-height:1.12}h1{font-size:clamp(42px,5.5vw,70px);letter-spacing:-.035em;margin:28px 0 22px}h1 em,h2 em{font-weight:500;color:var(--gold)}.hero-lead{max-width:500px;color:var(--muted);font-size:16px;line-height:1.9}
+.hero-actions{display:flex;align-items:center;gap:28px;margin-top:34px}.primary-link{display:inline-flex;align-items:center;gap:28px;background:linear-gradient(110deg,#d9c18d,#b9a6e9);color:#11172b;padding:16px 23px;border-radius:5px;text-decoration:none;font-size:13px;font-weight:800;box-shadow:0 12px 40px rgba(185,166,233,.18)}.primary-link span{font-size:18px}
+.hero-note{display:flex;align-items:center;gap:14px;color:var(--muted);font-size:12px;margin-top:45px}.note-star{font-size:26px;color:var(--gold)}.hero-note small{color:#7782a6}
+.hero-art{height:500px;position:relative;display:grid;place-items:center;isolation:isolate}.hero-art:before{content:"";position:absolute;width:370px;height:370px;border-radius:50%;background:radial-gradient(circle,rgba(126,117,207,.19),rgba(46,76,128,.09) 48%,transparent 72%);filter:blur(6px)}
+.orbit{position:absolute;border:1px solid rgba(183,195,255,.2);border-radius:50%;transform:rotate(-28deg)}.orbit-one{width:390px;height:260px}.orbit-two{width:300px;height:440px;transform:rotate(48deg);border-color:rgba(217,193,141,.23)}
+.planet{width:190px;height:190px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#d5c9ff,#7772ae 25%,#343d6e 54%,#111a36 76%);box-shadow:inset -25px -20px 45px #080d1e,0 0 80px rgba(164,152,240,.25);border:1px solid rgba(220,215,255,.45);font-size:55px;color:#f7e9c5}.planet span{filter:drop-shadow(0 0 12px #fff)}
+.constellation{position:absolute;color:#e6d5a6;text-shadow:0 0 14px #e6d5a6;font-size:22px}.constellation i,.constellation b,.constellation strong{position:absolute;width:5px;height:5px;border-radius:50%;background:#e6d5a6;box-shadow:0 0 9px #e6d5a6}.constellation i{left:55px;top:25px}.constellation b{left:90px;top:60px}.constellation strong{left:25px;top:80px}.constellation:after{content:"";position:absolute;left:7px;top:9px;width:100px;height:70px;border-top:1px solid rgba(217,193,141,.55);border-right:1px solid rgba(217,193,141,.55);transform:rotate(34deg)}
+.constellation-a{top:75px;right:65px}.constellation-b{bottom:95px;left:35px}.art-caption{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:80%;display:flex;justify-content:space-between;color:#7e88a9;font-size:9px;letter-spacing:.2em}
+.feature-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;margin-bottom:90px}.feature-strip>div{display:grid;grid-template-columns:42px 1fr;column-gap:12px;padding:0 25px;border-right:1px solid var(--line)}.feature-strip>div:first-child{padding-left:0}.feature-strip>div:last-child{border:0}.feature-strip span{grid-row:span 2;color:var(--gold);font-family:"Playfair Display";font-size:22px}.feature-strip b{font-size:13px;font-weight:700}.feature-strip small{font-size:11px;color:var(--muted)}
+.calculator-section,.info-section,.how-section,.faq-section{padding:65px 0 85px;text-align:center;scroll-margin-top:100px}.calculator-section{background:linear-gradient(180deg,transparent,rgba(21,30,62,.52),transparent);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-size:clamp(34px,4vw,48px);margin:17px 0}.section-intro{color:var(--muted);font-size:14px;margin-bottom:35px}
+.birthday-container{position:relative;width:min(760px,100%);margin:0 auto;padding:34px 38px 26px;background:linear-gradient(135deg,rgba(25,36,70,.9),rgba(14,23,48,.88));border:1px solid rgba(185,175,238,.24);border-radius:12px;box-shadow:0 25px 80px rgba(0,0,0,.25);text-align:left}
+.form-heading{font-family:"Playfair Display";font-size:24px;color:var(--text);margin-bottom:24px}.birthday-container__inputs-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:16px}.input1-wrap,.input2-wrap{display:flex;flex-direction:column;gap:8px;position:relative}.birthday-container label{font-size:11px;color:#c1c8df;letter-spacing:.05em}.birthday-container label span{color:#8791b0}
+input[type=date],input[type=text]{appearance:none;width:100%;height:54px;padding:0 15px;border:1px solid rgba(176,188,228,.28);border-radius:6px;background:#f4f2fb!important;color:#18203a!important;font:500 14px Manrope,Arial,sans-serif;outline:none;transition:.2s}input[type=text]::placeholder{color:#737b96!important;opacity:1}input:focus{border-color:#cbb987;box-shadow:0 0 0 3px rgba(217,193,141,.13)}input::-webkit-calendar-picker-indicator{opacity:.7;cursor:pointer}
+#get_the_answer{grid-column:1/-1;width:100%;height:56px;margin-top:8px;padding:0 22px;border:0;border-radius:6px;background:linear-gradient(110deg,#d9c18d,#b9a6e9);color:#151a31;font:800 13px Manrope,sans-serif;letter-spacing:.04em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:18px;transition:.2s}#get_the_answer:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(185,166,233,.2)}#get_the_answer b{font-size:19px}
+.errorOutput{color:#ffb5bd;font-size:12px;margin-top:10px}.errorOutput p{margin:5px 0}.form-footnote{font-size:10px;color:#8993b2;margin:18px 0 0}
+.matrix-container{margin:70px auto 90px;max-width:100%;padding:35px 20px;background:rgba(12,19,41,.78);border:1px solid var(--line);border-radius:12px;overflow:hidden}.display-none{display:none!important}.personal-calculator{font-size:clamp(28px,4vw,42px)!important;text-transform:none!important;font-family:"Playfair Display",serif!important}.output-personal-date{font-size:14px!important;color:var(--muted)!important}.pento{max-width:680px;margin:25px auto}.matrix-container svg{max-width:100%;height:auto}.matrix-container .chakra-table{max-width:100%;overflow-x:auto}
+.info-section{border-top:1px solid var(--line)}.info-lead{max-width:760px;margin:0 auto 38px;color:var(--muted);font-size:14px;line-height:1.9}.info-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left}.info-cards article{padding:28px;background:rgba(19,29,58,.72);border:1px solid var(--line);border-radius:8px}.info-cards article span{font-size:11px;color:var(--gold);letter-spacing:.1em}.info-cards h3,.steps h3{font-family:"Playfair Display";font-size:22px;font-weight:500;margin:16px 0 9px}.info-cards p,.steps p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}.disclaimer{max-width:760px;margin:28px auto 0;color:#7782a2;font-size:10px;line-height:1.8}
+.how-section{background:rgba(17,26,53,.48);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:42px;text-align:left}.steps>div{position:relative;padding-left:62px}.steps>div>span{position:absolute;left:0;top:0;width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(217,193,141,.55);border-radius:50%;color:var(--gold);font-family:"Playfair Display";font-size:20px}
+.faq-section details{max-width:760px;margin:12px auto;text-align:left;border-bottom:1px solid var(--line);padding:18px 4px}.faq-section summary{cursor:pointer;list-style:none;font-size:14px;font-weight:700}.faq-section summary:after{content:"＋";float:right;color:var(--gold)}.faq-section details[open] summary:after{content:"−"}.faq-section details p{color:var(--muted);font-size:13px;margin:14px 0 0}
+.site-footer{border-top:1px solid var(--line);background:#070b18}.footer-inner{min-height:120px;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-inner p{color:var(--muted);font-size:11px;margin:0}.footer-inner>span{color:#727c9c;font-size:10px}
+.errorOutput:empty{display:none}
+@media(max-width:800px){.container{width:min(100% - 36px,620px)}.header-inner{min-height:70px}.header-nav{display:none}.hero{grid-template-columns:1fr;padding:65px 0 25px;gap:0;min-height:unset}.hero-art{height:360px;grid-row:1}.hero-copy{grid-row:2}.hero-art .orbit-one{width:300px;height:210px}.hero-art .orbit-two{height:340px;width:230px}.planet{width:145px;height:145px}.feature-strip{margin:35px 0 55px}.feature-strip>div{padding:0 10px;grid-template-columns:28px 1fr}.feature-strip span{font-size:17px}.feature-strip b{font-size:11px}.feature-strip small{font-size:9px}.info-cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr;gap:24px}.footer-inner{padding:25px 0;flex-wrap:wrap}.footer-inner p{order:3;width:100%}.matrix-container{padding:25px 8px}.chakra-table{font-size:10px}}
+@media(max-width:520px){.container{width:calc(100% - 30px)}.brand{font-size:10px;letter-spacing:.12em}.header-cta{font-size:10px;padding:9px 12px}.hero{padding-top:45px}h1{font-size:43px}.hero-art{height:300px}.hero-actions{align-items:flex-start;flex-direction:column;gap:17px}.hero-note{margin-top:30px}.feature-strip{grid-template-columns:1fr;gap:17px;padding:20px 0}.feature-strip>div{border:0;padding:0!important}.feature-strip span{grid-row:span 2}.birthday-container{padding:25px 18px}.birthday-container__inputs-wrapper{grid-template-columns:1fr}.calculator-section,.info-section,.how-section,.faq-section{padding:52px 0 60px}.art-caption{width:95%}.footer-inner{justify-content:center;text-align:center}.footer-inner p{order:0}}
+
+/* Восстановленные стили SVG-матрицы: без них браузер рисует polygon чёрным */
+.matrix-container #matrix{display:block;width:100%;height:auto;overflow:visible;font-family:Georgia,'Times New Roman',serif}
+.matrix-container #matrix .cls-4{fill:none!important;stroke:rgba(255,255,255,.92);stroke-width:1.65;stroke-linejoin:round}
+.matrix-container #matrix .cls-3{fill:none;stroke:rgba(255,255,255,.82);stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}
+.matrix-container #matrix .cls-5{fill:none;stroke:#b58cff;stroke-width:1.6}
+.matrix-container #matrix .cls-7{fill:none;stroke:#ff735f;stroke-width:1.6}
+.matrix-container #matrix .cls-18{fill:none;stroke:rgba(255,255,255,.95);stroke-width:1.5;stroke-dasharray:7 9}
+.matrix-container #matrix .cls-6{fill:#b58cff}.matrix-container #matrix .cls-8{fill:#ff735f}
+.matrix-container #matrix .cls-53{fill:#fff;filter:drop-shadow(0 0 5px rgba(255,255,255,.65))}
+.matrix-container #matrix text,.matrix-container #matrix tspan{fill:#fff;font-family:Georgia,'Times New Roman',serif}
+.matrix-container #matrix .cls-33{font-size:11px;fill:rgba(255,255,255,.94)}
+.matrix-container #matrix .cls-43{font-size:10px;fill:rgba(255,255,255,.96)}
+.matrix-container #matrix .cls-44{font-size:12px;fill:rgba(255,255,255,.9)}
+.matrix-container #matrix .cls-54{font-size:24px;fill:#fff;font-weight:400;text-anchor:middle;dominant-baseline:middle}
+.matrix-container #matrix .cls-55{font-size:21px;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+.matrix-container #matrix .cls-56{font-size:27px;fill:#e5c75e;text-anchor:middle;dominant-baseline:middle}
+.matrix-container #matrix .cls-100{font-size:30px;fill:#FF0000;text-anchor:middle;dominant-baseline:middle}
+.matrix-container #matrix .cls-57,.matrix-container #matrix .cls-58,.matrix-container #matrix .cls-59,.matrix-container #matrix .cls-60,.matrix-container #matrix .cls-61,.matrix-container #matrix .clss{font-size:18px;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+.matrix-container #matrix .cls-10{fill:#a64dff;filter:drop-shadow(0 0 9px rgba(166,77,255,.95))}
+.matrix-container #matrix .cls-19{fill:#f05242;filter:drop-shadow(0 0 9px rgba(240,82,66,.9))}
+.matrix-container #matrix .cls-25{fill:#f3d47b;filter:drop-shadow(0 0 9px rgba(243,212,123,.9))}
+.matrix-container #matrix .cls-24{fill:#fff;filter:drop-shadow(0 0 8px rgba(255,255,255,.95))}
+.matrix-container #matrix .cls-22{fill:#f28a43;filter:drop-shadow(0 0 8px rgba(242,138,67,.9))}
+.matrix-container #matrix .cls-21{fill:#fff;filter:drop-shadow(0 0 7px rgba(255,255,255,.9))}
+.matrix-container #matrix .cls-15{fill:#48d7e8;filter:drop-shadow(0 0 8px rgba(72,215,232,.95))}
+.matrix-container #matrix .cls-13{fill:#3978ff;filter:drop-shadow(0 0 9px rgba(57,120,255,.95))}
+.matrix-container #matrix .cls-23{fill:#fff;filter:drop-shadow(0 0 8px rgba(255,255,255,.9))}
+.matrix-container #matrix .cls-26{fill:#a9ec55;filter:drop-shadow(0 0 8px rgba(169,236,85,.95))}
+.matrix-container #matrix .big-circle{stroke:rgba(255,255,255,.22);stroke-width:.7}
+.matrix-container #matrix .medium-circle,.matrix-container #matrix .small-circle{stroke:rgba(255,255,255,.22);stroke-width:.6}
+
+
+/* Улучшенная читаемость подписей матрицы */
+.matrix-container #matrix .cls-61{font-size:7.5px!important;font-weight:500;letter-spacing:-.2px;fill:rgba(255,255,255,.96)}
+.matrix-container #matrix .decade-label{font-family:Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:.1px;fill:#fff}
+/* На светлых узлах значения должны быть тёмными, чтобы не теряться на белом свечении. */
+.matrix-container #matrix #fpoint,.matrix-container #matrix #gpoint,.matrix-container #matrix #hpoint,.matrix-container #matrix #ipoint,
+.matrix-container #matrix #lpoint,.matrix-container #matrix #kpoint,.matrix-container #matrix #mpoint,
+.matrix-container #matrix #f2point,.matrix-container #matrix #f1point,.matrix-container #matrix #g2point,.matrix-container #matrix #g1point,
+.matrix-container #matrix #i2point,.matrix-container #matrix #i1point,.matrix-container #matrix #h2point,.matrix-container #matrix #h1point,
+.matrix-container #matrix #vpoint,.matrix-container #matrix #upoint,.matrix-container #matrix #rpoint,.matrix-container #matrix #qpoint{fill:#17213b!important;font-weight:600}
+.matrix-container #matrix .decade-label{paint-order:stroke;stroke:rgba(11,17,36,.55);stroke-width:2px;stroke-linejoin:round}
+
+/* Улучшенная читаемость внешней шкалы возраста */
+.matrix-container #matrix .cls-61{font-size:7.5px!important;font-weight:500;letter-spacing:-.2px;fill:rgba(255,255,255,.98)}
+
+
+/* ==========================================================
+   НАСТРОЙКА ВНЕШНЕЙ ШКАЛЫ ВОЗРАСТА МАТРИЦЫ
+   Файл: assets/styles/index.css
+   Здесь можно самостоятельно менять размер и вид подписей.
+   ========================================================== */
+
+/* Возрастные интервалы: 1–2,5; 2,5–3,5 и т.д.
+   Они повернуты в index.html вдоль каждой стороны восьмиугольника.
+   Важно: не задавайте общий translate для всех подписей —
+   координаты уже подобраны отдельно для каждой стороны. */
+.matrix-container #matrix .age-interval {
+  font-size: 6.2px !important; /* размер маленьких возрастных интервалов */
+  font-weight: 500;
+  letter-spacing: -0.12px;
+  text-anchor: middle;
+  fill: rgba(255,255,255,.98);
+}
+
+/* Промежуточные отметки: 5 лет, 15 лет, 25 лет и т.д.
+   Одна строка вместо трёх строк "5 / лет / возраст". */
+.matrix-container #matrix .age-half-label {
+  font-size: 7px !important; /* размер внутренних отметок возраста */
+  font-weight: 600;
+  letter-spacing: 0;
+  fill: rgba(255,255,255,.96);
+}
+
+/* ==========================================================
+   НАСТРОЙКА РАЗМЕРА КРУГОВ
+   Файл: src/style.js
+   Значения радиусов для разных браузеров находятся там.
+   ========================================================== */
