@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="./assets/styles/normalize.css" rel="stylesheet"/>
+<link href="./assets/styles/index.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet"/>
+<link href="https://static.tildacdn.com/img/tildafavicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="#090d20" name="theme-color"/>
+<meta content="Рассчитайте матрицу судьбы по дате рождения и познакомьтесь с её основными энергиями." name="description"/>
+<title>Матрица судьбы — личная карта энергий</title>
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="#"><span class="brand-mark">✧</span> МАТРИЦА СУДЬБЫ</a>
+<nav class="header-nav">
+
+</nav>
+<a class="header-cta" href="#calculator">Рассчитать <span>↗</span></a>
+</div>
+</header>
+<main>
+<div class="container">
+<section class="calculator-section" id="calculator">
+<div class="section-kicker">✦ НАЧНИ С СЕБЯ</div>
+<h2>Рассчитай свою МАТРИЦУ</em></h2>
+<p class="section-intro">Введи дату рождения — и мы построим твою персональную карту.</p>
+<div class="birthday-container">
+<p class="form-heading">Твои данные</p>
+<div class="birthday-container__inputs-wrapper">
+<div class="input1-wrap">
+<label for="date">Дата рождения</label>
+<input aria-label="Дата рождения" id="date" type="date"/>
+</div>
+<div class="input2-wrap">
+<label for="name">Имя <span>(необязательно)</span></label>
+<input autocomplete="given-name" id="name" placeholder="Например, Мария" size="10" type="text"/>
+</div>
+<button id="get_the_answer"><span>Рассчитать матрицу</span><b>↗</b></button>
+</div>
+<div class="errorOutput" role="alert"></div>
+<p class="form-footnote">✧ Данные используются только для построения расчёта в этом браузере.</p>
+</div>
+</section>
+<div class="matrix-container" id="matrix-result">
+<div class="personal-calculator">
+<p class="smoky-white">Ваша матрица судьбы</p>
+</div>
+<div class="output-personal-date smoky-white"></div>
+<div class="pento">
+<svg id="matrix" viewbox="0 0 680 600">
+<g id="matrix-frame">
+<rect class="cls-3" height="340.16" width="340.16" x="163.63" y="126.14"></rect>
+<rect class="cls-3" height="340.16" transform="translate(-158.13 367.16) rotate(-45)" width="340.16" x="227.87" y="127.54"></rect>
+<polygon class="cls-4" points="333.7 7.76 537.64 92.28 622.17 296.22 537.64 501.16 333.7 584.68 129.76 500.16 45.24 296.22 129.76 92.28 333.7 7.76"></polygon>
+<line class="cls-3" x1="333.7" x2="333.7" y1="27.76" y2="564.68"></line>
+<line class="cls-3" x1="65.24" x2="602.17" y1="296.22" y2="296.22"></line>
+<g>
+<line class="cls-5" x1="442" x2="226" y1="405" y2="189"></line>
+<polygon class="cls-6" points="441 402 439 404 442 405 441 402"></polygon>
+<polygon class="cls-6" points="226 189 229 190 227 192 226 189"></polygon>
+</g>
+<g>
+<line class="cls-7" x1="442" x2="226" y1="189" y2="405"></line>
+<polygon class="cls-8" points="442 189 439 190 441 192 442 189"></polygon>
+<polygon class="cls-8" points="226 405 227 402 229 404 226 405"></polygon>
+</g>
+<line class="cls-18" x1="502" x2="335" y1="297" y2="465"></line>
+<text class="cls-44" transform="translate(238.77 188.48) rotate(45)">
+                  Мужская линия рода
+                </text>
+<text class="cls-44" transform="translate(351.7 264.98) rotate(-45)">
+                  Женская линия рода
+                </text>
+<g transform="translate(100, 100)">
+<svg height="20px" viewbox="0 0 27 27" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path class="cls-53" d="M437.54,366.8c-6.26,0-7.12,6-7.28,6s-1.42-6-7.24-6c-7,0-8.91,5.9-8.51,9.45.71,6.14,15.74,18.54,15.74,18.54s15.06-12.4,15.77-18.54C446.43,372.7,444.55,366.8,437.54,366.8Z" transform="translate(-70 -8)"></path>
+</svg>
+</g>
+<g transform="translate(461, 370)">
+<text class="cls-56">$</text>
+</g>
+<g transform="translate(375, 455)">
+<text class="cls-100">♥</text>
+</g>
+<g id="points-basic">
+<circle class="cls-10 big-circle" cx="79.2" cy="297" r="31.5"></circle>
+<text class="cls-54 matrix-value-point" id="apoint" transform="translate(79.2 299)"></text>
+<circle class="cls-10 big-circle" cx="333.7" cy="42" r="31.5"></circle>
+<text class="cls-54 matrix-value-point" id="bpoint" transform="translate(333.7 42)"></text>
+<circle class="cls-19 big-circle" cx="587.13" cy="297" r="31.5"></circle>
+<text class="cls-54 matrix-value-point" id="cpoint" transform="translate(587.4 299)"></text>
+<circle class="cls-19 big-circle" cx="332.7" cy="554" r="31.5"></circle>
+<text class="cls-54 matrix-value-point" id="dpoint" transform="translate(332.7 557)"></text>
+<circle class="cls-25 big-circle" cx="334" cy="297" r="31.5"></circle>
+<text class="cls-55 clss matrix-value-point" id="epoint" transform="translate(334 299)"></text>
+<circle class="cls-24 big-circle" cx="151" cy="114.22" r="31.5"></circle>
+<text class="cls-55 matrix-value-point" id="fpoint" transform="translate(151 115)"></text>
+<circle class="cls-24 big-circle" cx="515.1" cy="114.22" r="31.5"></circle>
+<text class="cls-55 matrix-value-point" id="gpoint" transform="translate(515.1 115)"></text>
+<circle class="cls-24 big-circle" cx="514.1" cy="479.62" r="31.5"></circle>
+<text class="cls-55 matrix-value-point" id="ipoint" transform="translate(514.1 481)"></text>
+<circle class="cls-24 big-circle" cx="153" cy="479.62" r="31.5"></circle>
+<text class="cls-55 matrix-value-point" id="hpoint" transform="translate(153 481)"></text>
+<circle class="cls-22 small-circle" cx="332.59" cy="466" r="19"></circle>
+<text class="cls-57 matrix-value-point" id="jpoint" transform="translate(332.69 466)"></text>
+<circle class="cls-22 small-circle" cx="500" cy="297" r="19"></circle>
+<text class="cls-57 matrix-value-point" id="npoint" transform="translate(500 299)"></text>
+<circle class="cls-21 small-circle" cx="418.18" cy="380.69" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="lpoint" transform="translate(418.18 382)"></text>
+<circle class="cls-21 small-circle" cx="375" cy="424" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="kpoint" transform="translate(375 426)"></text>
+<circle class="cls-21 small-circle" cx="461" cy="338" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="mpoint" transform="translate(461 338)"></text>
+<circle class="cls-15 small-circle" cx="165.61" cy="297" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="spoint" transform="translate(165.61 299)"></text>
+<circle class="cls-15 small-circle" cx="333.7" cy="129" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="tpoint" transform="translate(333.7 131)"></text>
+<circle class="cls-13 medium-circle" cx="127.11" cy="297" r="22"></circle>
+<text class="cls-59 matrix-value-point" id="opoint" transform="translate(127.11 299)"></text>
+<circle class="cls-13 medium-circle" cx="333.7" cy="90.62" r="22"></circle>
+<text class="cls-59 matrix-value-point" id="ppoint" transform="translate(333.7 92)"></text>
+<circle class="cls-23 medium-circle" cx="333" cy="505" r="22"></circle>
+<text class="cls-60 matrix-value-point" id="rpoint" transform="translate(333 505)"></text>
+<circle class="cls-23 medium-circle" cx="538.5" cy="297" r="22"></circle>
+<text class="cls-60 matrix-value-point" id="qpoint" transform="translate(538.5 299)"></text>
+<circle class="cls-26 small-circle" cx="245.26" cy="297" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="wpoint" transform="translate(245.26 299)"></text>
+<circle class="cls-26 small-circle" cx="333.7" cy="203" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="xpoint" transform="translate(333.7 204)"></text>
+<circle class="cls-21 small-circle" cx="212" cy="175.93" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="f2point" transform="translate(212 179)"></text>
+<circle class="cls-23 medium-circle" cx="184.71" cy="149.53" r="22"></circle>
+<text class="cls-60 matrix-value-point" id="f1point" transform="translate(184.71 151)"></text>
+<circle class="cls-21 small-circle" cx="455.4" cy="177.53" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="g2point" transform="translate(455.4 179)"></text>
+<circle class="cls-23 medium-circle" cx="480.79" cy="149.13" r="22"></circle>
+<text class="cls-60 matrix-value-point" id="g1point" transform="translate(480.79 151)"></text>
+<circle class="cls-21 small-circle" cx="454.4" cy="416.91" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="i2point" transform="translate(454.4 416.91)"></text>
+<circle class="cls-23 medium-circle" cx="479.79" cy="445.31" r="22"></circle>
+<text class="cls-60 matrix-value-point" id="i1point" transform="translate(479.79 447)"></text>
+<circle class="cls-21 small-circle" cx="215" cy="419" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="h2point" transform="translate(215 419)"></text>
+<circle class="cls-23 medium-circle" cx="188.71" cy="446.7" r="22"></circle>
+<text class="cls-60 matrix-value-point" id="h1point" transform="translate(188.71 447)"></text>
+<circle class="cls-21 small-circle" cx="420.54" cy="297" r="19"></circle>
+<text class="cls-58 matrix-value-point" id="vpoint" transform="translate(420.54 299)"></text>
+<circle class="cls-23 medium-circle" cx="382" cy="297" r="22"></circle>
+<text class="cls-60 matrix-value-point" id="upoint" transform="translate(382 299)"></text>
+</g>
+<g id="points-лет">
+<text class="cls-28 decade-label" text-anchor="middle" transform="translate(20 295)">0 лет</text>
+<text class="cls-28 decade-label" text-anchor="middle" transform="translate(100 70)">10 лет</text>
+<text class="cls-28 decade-label" text-anchor="middle" transform="translate(330 -22)">20 лет</text>
+<text class="cls-28 decade-label" text-anchor="middle" transform="translate(550 70)">30 лет</text>
+<text class="cls-28 decade-label" text-anchor="middle" transform="translate(638 295)">40 лет</text>
+<text class="cls-28 decade-label" text-anchor="middle" transform="translate(550 515)">50 лет</text>
+<text class="cls-28 decade-label" text-anchor="middle" transform="translate(328 610)">60 лет</text>
+<text class="cls-28 decade-label" text-anchor="middle" transform="translate(100 515)">70 лет</text>
+<text class="cls-29 age-half-label" text-anchor="middle" transform="translate(97.49 198.76)">5 лет</text>
+<text class="cls-29 age-half-label" text-anchor="middle" transform="translate(232.22 66.42)">15 лет</text>
+<text class="cls-29 age-half-label" text-anchor="middle" transform="translate(405.8 67.22)">25 лет</text>
+<text class="cls-29 age-half-label" text-anchor="middle" transform="translate(540.55 204.76)">35 лет</text>
+<text class="cls-29 age-half-label" text-anchor="middle" transform="translate(542.76 402.12)">45 лет</text>
+<text class="cls-29 age-half-label" text-anchor="middle" transform="translate(403.8 539.38)">55 лет</text>
+<text class="cls-29 age-half-label" text-anchor="middle" transform="translate(235.6 539.38)">65 лет</text>
+<text class="cls-29 age-half-label" text-anchor="middle" transform="translate(97.69 400.12)">75 лет</text>
+<!--
+  НАСТРОЙКА КООРДИНАТ ВОЗРАСТНЫХ ИНТЕРВАЛОВ.
+  Файл: index.html, группа points-лет.
+  У каждой подписи свой translate(x y) и угол rotate(...):
+  - translate(x y) меняет положение конкретного интервала;
+  - rotate(...) поворачивает его вдоль соответствующей стороны;
+  - порядок 48 подписей идёт по периметру матрицы по часовой стрелке.
+  Не сдвигайте все подписи одним общим смещением: углы восьмиугольника
+  имеют разное направление, поэтому координаты настраиваются отдельно.
+-->
+
+
+</g>
+</svg>
+</div>
+
+
+
+</div>
+</div>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#"><span class="brand-mark">✧</span> МАТРИЦА СУДЬБЫ</a><p>Исследуй себя с любопытством и бережностью.</p><span>© 2026 · Матрица судьбы</span></div></footer>
+<script src="./src/code.js"></script>
+<script src="./src/script_person.js"></script>
+<script src="./src/style.js"></script>
+</body>
+</html>
